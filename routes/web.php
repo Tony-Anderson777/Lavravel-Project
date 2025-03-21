@@ -7,13 +7,14 @@ use App\Http\Livewire\BookingComponents;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use  App\Models\Booking;
+use App\Http\Controllers\DashboardController;
+
 // Route d'accueil
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-// Route du tableau de bord (protégée par auth et verified)
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
 
 Route::get('/', function () {
     return view('welcome');

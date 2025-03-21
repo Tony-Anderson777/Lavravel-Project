@@ -13,7 +13,10 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Inclusion du fichier bookings/index.blade.php -->
+        @include('bookings.index', ['bookings' => $bookings])
     </div>
 </x-app-layout>
-@vite
+
 @vite(['resources/css/app.css', 'resources/js/app.js'])
