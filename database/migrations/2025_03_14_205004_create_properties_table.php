@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 // Le nom de la classe doit être en PascalCase
-class 2025_03_14_205004_create_properties_table extends Migration
+class CreatePropertiesTable extends Migration
 {
     public function up()
     {
